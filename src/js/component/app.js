@@ -34,27 +34,23 @@ export function ToDolist() {
 							className="list-group-item"
 							key={index}>
 							{item}{" "}
-							<button className="btn btn-danger">
-								<i
-									className="fas fa-trash"
-									onClick={() => DeleteItems(index)}></i>
-							</button>
+							<i
+								className="fas fa-trash"
+								onClick={() => DeleteItems(index)}></i>
+							{/* <button className="btn btn-danger">
+								
+							</button> */}
 						</li>
 					);
 				})}
-				<h3>
+				<div className="m-3">
 					<button
 						type="button"
-						className="btn btn-warning text-white"
-						// style={{
-						// 	fontSize: "25px",
-						// 	fontWeight: "bold"
-						// }}>
-					>
+						className="btn btn-danger btn-sm text-white mx-2">
 						{list.length}
 					</button>
 					{list.length > 1 ? "items left" : "item left"}
-				</h3>
+				</div>
 			</ul>
 		</div>
 	);
